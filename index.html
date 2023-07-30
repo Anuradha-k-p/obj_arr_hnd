@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+            
+</head>
+<body>
+<h4>Q1. We are interested in retrieving only the students' names; all the names should be in caps.
+         ['JOHN', 'BABA', 'YAGA', 'WICK']"</h4>
+         <pre> ANS:   studentRecords.map((item)=>{
+                  console.log(item.name.toUpperCase());
+                 })
+              </pre><hr>
+
+<h4>Q2.Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+
+              [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"</h4>  
+              
+ <pre>ANS: let student = studentRecords.filter((item)=>{
+                             return item.marks>50 
+                 })
+
+         console.log(student);
+              </pre><hr>       
+              
+<h4 >Q3.Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.</h4>
+<pre >ANS:    studentRecords.map((item)=>{
+                            if(item.id>120 && item.marks>50){
+                            console.log(item)
+                            }
+                })
+</pre><hr>
+
+
+<h4>Q4.Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</h4>
+<pre>ANS:let student1= studentRecords.reduce((prev,curr)=>{
+                           return prev += curr.marks
+                },0)
+                console.log(student1);
+</pre><hr>
+
+
+
+<h4>Q5.This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</h4>
+<pre>ANS:studentRecords.map((item)=>{
+                            if(item.marks>50){
+                                           console.log(item.name)
+                             }
+              })</pre><hr>
+
+ 
+<h4>Q6.This time we are required to print the sum of marks of the students with id > 120.</h4>
+<pre>ANS:let stu = studentRecords.filter((item)=>{
+                            return (item.id>120)
+               }).reduce((pre,cur)=>{
+                             return pre += cur.marks
+               },0)
+              
+              
+               console.log(stu);</pre><hr>
+              
+
+<h4>Q7. This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been
+ added to those students who scored less than 50.</h4>
+<pre>ANS:studentRecords.forEach((student) => { 
+        if (student.marks < 50) { 
+          student.marks += 15; 
+        }
+        const totalMarks = student.marks; 
+        if (totalMarks > 50) { 
+          console.log(`${student.name}: ${totalMarks}`);
+        } 
+      });
+</pre><hr>
+
+
+<h4>Q8.Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. </h4>
+<pre>ANS:let stu1 = {
+        name:"Shikha",
+        class: 7,
+        rollno : 16
+   }
+let stu2 = {
+        name:"Nishu",
+        class: 8,
+        rollno : 17
+    }
+let stu3 = {
+        name:"Astha",
+        class: 9,
+        rollno : 18
+  }
+let stu4 = {
+        name:"Himani",
+        class: 10,
+        rollno : 19
+  }
+let stu5 = {
+        name:"Prachi",
+        class: 11,
+        rollno : 20
+   }
+let stu6 = {
+        name:"Laxmi",
+        class: 12,
+        rollno : 21
+   }
+
+let st7 = new Array(stu1,stu2,stu3,stu4,stu5,stu6);
+console.log(st7);
+
+</pre><hr>
+
+              
+       
+</body>
+</html>
